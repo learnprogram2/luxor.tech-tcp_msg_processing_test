@@ -6,7 +6,6 @@ import (
 	"luxor.tech/tcp_msg_processing_test/internal/server"
 	"luxor.tech/tcp_msg_processing_test/pkg/logger"
 	rds_db "luxor.tech/tcp_msg_processing_test/rds-db"
-	"sync"
 	"testing"
 	"time"
 )
@@ -32,9 +31,6 @@ func TestUtils(t *testing.T) {
 	assert.Nil(err)
 	assert.Equal(11, len(nonce))
 }
-
-var once sync.Once
-var testServer *server.Server
 
 func Init() {
 	once.Do(func() {
