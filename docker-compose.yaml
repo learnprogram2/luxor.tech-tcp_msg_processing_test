@@ -1,0 +1,18 @@
+services:
+  postgres-db:
+    image: postgres:15
+    user: postgres
+    restart: always
+    healthcheck:
+      test: "pg_isready -U rds_db_admin --dbname=postgres"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: rds_db_admin
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./rds-db/db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
