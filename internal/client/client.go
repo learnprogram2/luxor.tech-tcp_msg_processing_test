@@ -150,7 +150,7 @@ func (c *Client) CalculateResult(serverNonce string) (string, string) {
 	}
 
 	// Generate client_nonce
-	clientNonce, err := generateClientNonce(16)
+	clientNonce, err := GenerateClientNonce(16)
 	if err != nil {
 		logger.Error("Failed to generate client_nonce:", err)
 		return "", ""
@@ -196,7 +196,7 @@ func (c *Client) Submit(jobID int, clientNonce, result string, limit bool) (*Res
 	return c.ReadServerResponse()
 }
 
-func generateClientNonce(length int) (string, error) {
+func GenerateClientNonce(length int) (string, error) {
 	const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 	result := make([]byte, length)
 	for i := 0; i < length; i++ {
