@@ -26,6 +26,13 @@ func TestClient(t *testing.T) {
 	})
 }
 
+func TestUtils(t *testing.T) {
+	nonce, err := client.GenerateClientNonce(11)
+	assert := require.New(t)
+	assert.Nil(err)
+	assert.Equal(11, len(nonce))
+}
+
 var once sync.Once
 var testServer *server.Server
 

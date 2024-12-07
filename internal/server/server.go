@@ -175,7 +175,7 @@ func calculateSHA256(input string) string {
 	return hex.EncodeToString(hash[:])
 }
 
-func generateServerNonce() string {
+func GenerateServerNonce() string {
 	return fmt.Sprintf("%d", rand.Int63())
 }
 
@@ -227,7 +227,7 @@ func (s *Server) DistributionJob(conn net.Conn, session *Session) {
 	defer session.mu.Unlock()
 
 	session.CurrJobID++
-	session.ServerNonce = generateServerNonce()
+	session.ServerNonce = GenerateServerNonce()
 
 	session.GetJob()
 	session.CleanExpireJobHistory(100)
