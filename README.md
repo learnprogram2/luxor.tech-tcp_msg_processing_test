@@ -30,6 +30,12 @@ end
 
 ## How to Build
 
+### Client
+Mac os: `make build-client`
+
+Linux: `make build-client-linux`
+
+### Server
 Mac os: `make build-server`
 
 Linux: `make build-server-linux`
@@ -39,7 +45,9 @@ Linux: `make build-server-linux`
 Mac os: 
 1. `docker-compose up`
 2. `make run-server`
+3. `make run-client`
 
 Linux: 
 1. `docker-compose up`
-2. `make run-client`
+2. `make run-server`
+3. `make run-client`
