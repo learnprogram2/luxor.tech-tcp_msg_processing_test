@@ -3,11 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
-	"luxor.tech/tcp_msg_processing_test/pkg/logger"
 	"os"
 	"time"
 
 	"luxor.tech/tcp_msg_processing_test/internal/client"
+	"luxor.tech/tcp_msg_processing_test/pkg/logger"
 )
 
 func main() {

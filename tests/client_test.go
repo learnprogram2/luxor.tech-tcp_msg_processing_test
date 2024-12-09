@@ -1,13 +1,15 @@
 package tests
 
 import (
-	"github.com/stretchr/testify/require"
+	"testing"
+	"time"
+
 	"luxor.tech/tcp_msg_processing_test/internal/client"
 	"luxor.tech/tcp_msg_processing_test/internal/server"
 	"luxor.tech/tcp_msg_processing_test/pkg/logger"
 	rds_db "luxor.tech/tcp_msg_processing_test/rds-db"
-	"testing"
-	"time"
+
+	"github.com/stretchr/testify/require"
 )
 
 func TestClient(t *testing.T) {

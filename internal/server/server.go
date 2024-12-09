@@ -6,13 +6,14 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"luxor.tech/tcp_msg_processing_test/pkg/logger"
-	"luxor.tech/tcp_msg_processing_test/pkg/util"
 	"math/rand"
 	"net"
 	"strings"
 	"sync"
 	"time"
+
+	"luxor.tech/tcp_msg_processing_test/pkg/logger"
+	"luxor.tech/tcp_msg_processing_test/pkg/util"
 )
 
 type Server struct {

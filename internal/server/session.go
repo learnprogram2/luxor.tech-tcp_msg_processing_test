@@ -2,10 +2,11 @@ package server
 
 import (
 	"fmt"
-	"luxor.tech/tcp_msg_processing_test/pkg/logger"
-	rds_db "luxor.tech/tcp_msg_processing_test/rds-db"
 	"sync"
 	"time"
+
+	"luxor.tech/tcp_msg_processing_test/pkg/logger"
+	rds_db "luxor.tech/tcp_msg_processing_test/rds-db"
 )
 
 // Session for client

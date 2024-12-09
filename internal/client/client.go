@@ -8,12 +8,13 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"luxor.tech/tcp_msg_processing_test/pkg/logger"
-	"luxor.tech/tcp_msg_processing_test/pkg/util"
 	"math/big"
 	"net"
 	"strings"
 	"time"
+
+	"luxor.tech/tcp_msg_processing_test/pkg/logger"
+	"luxor.tech/tcp_msg_processing_test/pkg/util"
 )
 
 type Client struct {
